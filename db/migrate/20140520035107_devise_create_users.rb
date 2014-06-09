@@ -33,9 +33,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string   :first_name
       t.string   :last_name
       t.string   :contact_number
-      t.string   :city
-      t.string   :street_address
-      t.long     :deposit_amount
 
       t.timestamps
     end

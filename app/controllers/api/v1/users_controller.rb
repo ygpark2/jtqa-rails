@@ -2,7 +2,7 @@ require 'jwt'
 
 module Api
   module V1
-    class UsersController < ApplicationController
+    class UsersController < BaseController
 
       before_action :validate_token, except: [:login]
 

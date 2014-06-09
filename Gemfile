@@ -26,6 +26,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'rolify'
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'rack-cors', :require => 'rack/cors'
+
+gem 'kaminari' # adds pagination to ActiveModels
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
