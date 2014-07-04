@@ -15,6 +15,7 @@ module JtqaApi
     # Auto-load API and its subdirectories
     # config.paths.add 'app/api', glob: '**/*.rb'
     # config.autoload_paths += Dir["#{Rails.root}/app/api/*"]
+    config.autoload_paths += %W(#{config.root}/app/models/posts)
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
