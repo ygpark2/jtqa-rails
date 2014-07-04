@@ -28,6 +28,10 @@ gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'rack-cors', :require => 'rack/cors'
 
+gem 'acts_as_votable', '~> 0.10.0'
+gem 'acts-as-taggable-on'
+gem 'acts_as_commentable'
+
 gem 'kaminari' # adds pagination to ActiveModels
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
