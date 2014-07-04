@@ -62,22 +62,26 @@ ActiveRecord::Schema.define(version: 20140704060512) do
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "participants", force: true do |t|
-    t.string   "state"
-    t.string   "name"
-    t.string   "email"
-    t.string   "phone"
+    t.string   "state",      limit: 5,  null: false
+    t.string   "name",       limit: 60, null: false
+    t.string   "email",      limit: 80, null: false
+    t.string   "phone",      limit: 15, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "posts", force: true do |t|
-    t.string   "name"
-    t.string   "title"
+    t.string   "type",       limit: 50,  default: ""
+    t.string   "name",       limit: 50,  default: ""
+    t.string   "title",      limit: 250, default: ""
     t.text     "content"
-    t.integer  "views"
+    t.integer  "views",      limit: 12,  default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "posts", ["title"], name: "index_posts_on_title"
+  add_index "posts", ["type"], name: "index_posts_on_type"
 
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"
@@ -109,6 +113,9 @@ ActiveRecord::Schema.define(version: 20140704060512) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "contact_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

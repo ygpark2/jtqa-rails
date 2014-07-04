@@ -5,7 +5,7 @@ module Api
       private
 
       def post_params
-        params.require(:post).permit(:name, :title, :content)
+        params.require(:comment).permit(:name, :title, :content)
       end
 
       def query_params
