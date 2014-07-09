@@ -10,7 +10,6 @@ module Api
 
     # POST /api/{plural_resource_name}
     def create
-      logger.debug("create!!!!!!!!!!!!!!!!!!!!")
       set_resource(resource_class.new(resource_params))
 
       if get_resource.save
@@ -32,6 +31,8 @@ module Api
       resources = resource_class.where(query_params).page(page_params[:page]).per(page_params[:page_size])
 
       instance_variable_set(plural_resource_name, resources)
+      logger.debug("rsc name => " + plural_resource_name)
+      logger.debug("inst var => " + instance_variable_get(plural_resource_name).inspect)
       respond_with instance_variable_get(plural_resource_name)
     end
 

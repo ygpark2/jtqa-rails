@@ -25,12 +25,39 @@ module JtqaApi
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # Allow access to GitLab API from other domains
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '/api/*', headers: :any, methods: [:get, :post, :options, :put, :delete]
+      end
+    end
+=begin
+    config.middleware.insert_before "ActionDispatch::Static", "Rack::Cors", :debug => true, :logger => Rails.logger do
+      allow do
+        origins '*'
+
+        resource '/cors',
+                 :headers => :any,
+                 :methods => [:post],
+                 :credentials => true,
+                 :max_age => 0
+
+        resource '*',
+                 :headers => :any,
+                 :methods => [:get, :post, :delete, :put, :options],
+                 :max_age => 0
+      end
+    end
+
+
     config.middleware.use Rack::Cors do
       allow do
         origins '*'
         resource '*', :headers => :any, :methods => [:get, :post, :delete, :put, :options]
       end
     end
+=end
 
   end
 end

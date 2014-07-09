@@ -1,3 +1,3 @@
-class Carpool < ActiveRecord::Base
+class Carpool < Post
 
 end
