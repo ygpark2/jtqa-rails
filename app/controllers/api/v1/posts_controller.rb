@@ -5,11 +5,11 @@ module Api
       private
 
       def post_params
-        params.require(:post).permit(:name, :title, :content)
+        params.require(:post).permit(:type, :name, :title, :email, :contact, :content)
       end
 
       def query_params
-        params.permit(:name)
+        params.permit(:name, :title)
       end
 
     end

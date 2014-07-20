@@ -73,13 +73,16 @@ ActiveRecord::Schema.define(version: 20140704060512) do
   add_index "participants", ["state"], name: "index_participants_on_state"
 
   create_table "posts", force: true do |t|
-    t.string   "type",       limit: 50,  default: "", null: false
-    t.string   "name",       limit: 50,  default: "", null: false
-    t.string   "email",      limit: 100, default: "", null: false
-    t.string   "phone",      limit: 50,  default: "", null: false
-    t.string   "title",      limit: 250, default: "", null: false
-    t.text     "content",                             null: false
-    t.integer  "views",      limit: 12,  default: 0,  null: false
+    t.string   "type",           limit: 50,  default: "",          null: false
+    t.string   "category",       limit: 100, default: "default",   null: false
+    t.string   "user_id",        limit: 30,  default: "Anonymous", null: false
+    t.string   "name",           limit: 50,  default: "",          null: false
+    t.string   "email",          limit: 100, default: "",          null: false
+    t.string   "phone",          limit: 25,  default: "",          null: false
+    t.string   "title",          limit: 250, default: "",          null: false
+    t.text     "content",                                          null: false
+    t.integer  "views",          limit: 12,  default: 0,           null: false
+    t.integer  "total_comments", limit: 12,  default: 0,           null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

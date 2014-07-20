@@ -1,0 +1,3 @@
+class Brisbane < Post
+
+end

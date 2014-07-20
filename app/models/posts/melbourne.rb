@@ -1,0 +1,3 @@
+class Melbourne < Post
+
+end
