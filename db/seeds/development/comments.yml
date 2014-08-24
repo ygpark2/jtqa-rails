@@ -1,0 +1,42 @@
+# comments.yml
+
+records:
+  - sprig_id: 1
+    commentable:   "<%= sprig_record(Brisbane, 1) %>"
+    user:          "<%= sprig_record(User, 1) %>"
+    title:         "Brisbane Post 1 comment title"
+    comment:       "Brisbane Post 1 Comment body"
+  - sprig_id: 2
+    commentable:   "<%= sprig_record(Brisbane, 2) %>"
+    user:          "<%= sprig_record(User, 2) %>"
+    title:         "Brisbane Post 2 comment title"
+    comment:       "Brisbane Post 2 Comment body"
+  - sprig_id: 3
+    commentable:   "<%= sprig_record(Brisbane, 3) %>"
+    user:          "<%= sprig_record(User, 3) %>"
+    title:         "Brisbane Post 3 comment title"
+    comment:       "Brisbane Post 3 Comment body"
+  - sprig_id: 4
+    commentable:   "<%= sprig_record(Brisbane, 3) %>"
+    user:          "<%= sprig_record(User, 2) %>"
+    title:         "Brisbane Post 4 comment title"
+    comment:       "Brisbane Post 4 Comment body"
+  - sprig_id: 5
+    commentable:   "<%= sprig_record(Brisbane, 2) %>"
+    user:          "<%= sprig_record(User, 1) %>"
+    title:         "Brisbane Post 5 comment title"
+    comment:       "Brisbane Post 5 Comment body"
+  - sprig_id: 6
+    commentable:   "<%= sprig_record(Brisbane, 1) %>"
+    user:          "<%= sprig_record(User, 3) %>"
+    title:         "Brisbane Post 6 comment title"
+    comment:       "Brisbane Post 6 Comment body"
+  - sprig_id: 7
+    commentable:   "<%= sprig_record(Brisbane, 5) %>"
+    user:          "<%= sprig_record(User, 2) %>"
+    title:         "Brisbane Post 7 comment title"
+    comment:       "Brisbane Post 7 Comment body"
+  - sprig_id: 8
+    commentable:   "<%= sprig_record(Brisbane, 5) %>"
+    user:          "<%= sprig_record(User, 1) %>"
+    title:         "Brisbane Post 8 comment title"

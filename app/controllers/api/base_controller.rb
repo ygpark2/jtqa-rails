@@ -33,12 +33,12 @@ module Api
       instance_variable_set(plural_resource_name, resources)
       logger.debug("rsc name => " + plural_resource_name)
       logger.debug("inst var => " + instance_variable_get(plural_resource_name).inspect)
-      respond_with instance_variable_get(plural_resource_name)
+      respond_with resource_name.pluralize => instance_variable_get(plural_resource_name)
     end
 
     # GET /api/{plural_resource_name}/1
     def show
-      respond_with get_resource
+      respond_with resource_name => get_resource
     end
 
     # PATCH/PUT /api/{plural_resource_name}/1

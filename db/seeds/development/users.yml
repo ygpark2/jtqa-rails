@@ -1,0 +1,52 @@
+
+records:
+  - sprig_id:   1
+    email:                  "abcd@test1.com"
+    password:               "password1234"
+    reset_password_token:   "reset_pass_token1"
+    reset_password_sent_at: "<%= 1.second.ago %>"
+    remember_created_at:    "<%= 1.second.ago %>"
+    sign_in_count:          10
+    current_sign_in_at:     "<%= 10.second.ago %>"
+    last_sign_in_at:        "<%= 10.second.ago %>"
+    current_sign_in_ip:     "192.168.0.1"
+    last_sign_in_ip:        "192.168.0.10"
+    first_name:             "Lawson"
+    last_name:              "Kurtz"
+    contact_number:         "0413-843-182"
+    roles:
+      - "<%= sprig_record(Role, 1) %>"
+      - "<%= sprig_record(Role, 2) %>"
+  - sprig_id:   2
+    email:                  "abcd@test2.com"
+    password:               "password1234"
+    reset_password_token:   "reset_pass_token2"
+    reset_password_sent_at: "<%= 1.second.ago %>"
+    remember_created_at:    "<%= 1.second.ago %>"
+    sign_in_count:          10
+    current_sign_in_at:     "<%= 10.second.ago %>"
+    last_sign_in_at:        "<%= 10.second.ago %>"
+    current_sign_in_ip:     "192.168.0.1"
+    last_sign_in_ip:        "192.168.0.10"
+    first_name:             "Lawson"
+    last_name:              "Kurtz"
+    contact_number:         "0413-843-182"
+    roles:
+      - "<%= sprig_record(Role, 1) %>"
+      - "<%= sprig_record(Role, 3) %>"
+  - sprig_id:   3
+    email:                  "abcd@test3.com"
+    password:               "password1234"
+    reset_password_token:   "reset_pass_token3"
+    reset_password_sent_at: "<%= 1.second.ago %>"
+    remember_created_at:    "<%= 1.second.ago %>"
+    sign_in_count:          15
+    current_sign_in_at:     "<%= 10.second.ago %>"
+    last_sign_in_at:        "<%= 10.second.ago %>"
+    current_sign_in_ip:     "192.168.0.1"
+    last_sign_in_ip:        "192.168.0.10"
+    first_name:             "Lawson"
+    last_name:              "Kurtz"
+    contact_number:         "0413-843-182"
+    roles:
+      - "<%= sprig_record(Role, 1) %>"

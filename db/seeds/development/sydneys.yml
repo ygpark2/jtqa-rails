@@ -1,0 +1,57 @@
+
+records:
+  - sprig_id: 1
+    category:        "default"
+    user_id:         "ygpark2"
+    name:            "author"
+    email:           "writer@author.com"
+    phone:           "04-3829-3424"
+    title:           "Sydney post title 1"
+    content:         "Sydney post content 1"
+    views:           10
+    total_comments:  20
+    tag_list:        "first, 123, sydney, home, happy"
+  - sprig_id: 2
+    category:        "default"
+    user_id:         "ygpark2"
+    name:            "author"
+    email:           "writer@author.com"
+    phone:           "04-3829-3424"
+    title:           "Sydney post title 2"
+    content:         "Sydney post content 2"
+    views:           10
+    total_comments:  20
+    tag_list:        "second, 123, sydney, home, happy"
+  - sprig_id: 3
+    category:        "default"
+    user_id:         "ygpark2"
+    name:            "author"
+    email:           "writer@author.com"
+    phone:           "04-3829-3424"
+    title:           "Sydney post title 3"
+    content:         "Sydney post content 3"
+    views:           10
+    total_comments:  20
+    tag_list:        "third, 123, sydney, cool, tag"
+  - sprig_id: 4
+    category:        "test"
+    user_id:         "ygpark2"
+    name:            "author"
+    email:           "writer@author.com"
+    phone:           "04-3829-3424"
+    title:           "Sydney post title 4"
+    content:         "Sydney post content 4"
+    views:           10
+    total_comments:  20
+    tag_list:        "forth, 4, nappy, sydney, home, happy"
+  - sprig_id: 5
+    category:        "test"
+    user_id:         "ygpark2"
+    name:            "author"
+    email:           "writer@author.com"
+    phone:           "04-3829-3424"
+    title:           "Sydney post title 5"
+    content:         "Sydney post content 5"
+    views:           10
+    total_comments:  20
+    tag_list:        "fifth, 5, merong, ain, home, sydney, happy"

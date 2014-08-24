@@ -1,0 +1,57 @@
+
+records:
+  - sprig_id: 1
+    category:        "default"
+    user_id:         "ygpark2"
+    name:            "author"
+    email:           "writer@author.com"
+    phone:           "04-3829-3424"
+    title:           "Melbourne Post title 1"
+    content:         "Melbourne Post content 1"
+    views:           10
+    total_comments:  20
+    tag_list:        "first, 123, melbourne, home, happy"
+  - sprig_id: 2
+    category:        "default"
+    user_id:         "ygpark2"
+    name:            "author"
+    email:           "writer@author.com"
+    phone:           "04-3829-3424"
+    title:           "Melbourne Post title 2"
+    content:         "Melbourne Post content 2"
+    views:           10
+    total_comments:  20
+    tag_list:        "second, 123, melbourne, home, happy"
+  - sprig_id: 3
+    category:        "default"
+    user_id:         "ygpark2"
+    name:            "author"
+    email:           "writer@author.com"
+    phone:           "04-3829-3424"
+    title:           "Melbourne Post title 3"
+    content:         "Melbourne Post content 3"
+    views:           10
+    total_comments:  20
+    tag_list:        "third, 123, melbourne, cool, tag"
+  - sprig_id: 4
+    category:        "test"
+    user_id:         "ygpark2"
+    name:            "author"
+    email:           "writer@author.com"
+    phone:           "04-3829-3424"
+    title:           "Melbourne Post title 4"
+    content:         "Melbourne Post content 4"
+    views:           10
+    total_comments:  20
+    tag_list:        "forth, 4, melbourne, nappy, home, happy"
+  - sprig_id: 5
+    category:        "test"
+    user_id:         "ygpark2"
+    name:            "author"
+    email:           "writer@author.com"
+    phone:           "04-3829-3424"
+    title:           "Melbourne Post title 5"
+    content:         "Melbourne Post content 5"
+    views:           10
+    total_comments:  20
+    tag_list:        "fifth, 5, merong, ain, melbourne, home, happy"

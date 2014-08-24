@@ -32,6 +32,8 @@ gem 'acts_as_votable', '~> 0.10.0'
 gem 'acts-as-taggable-on'
 gem 'acts_as_commentable'
 
+gem 'sprig', '~> 0.1'
+
 gem 'kaminari' # adds pagination to ActiveModels
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
