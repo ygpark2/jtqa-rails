@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :participants
-      resources :posts, :brisbanes, :sydneys, :melbournes, :defaults => {:format => "json"} do
+      resources :brisbanes, :sydneys, :melbournes, :defaults => {:format => "json"} do
         resources :comments, :defaults => {:format => "json"} # , only: [:create, :destroy, :edit, :update]
       end
     end

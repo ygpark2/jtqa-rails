@@ -13,7 +13,8 @@ module Api
       set_resource(resource_class.new(resource_params))
 
       if get_resource.save
-        render :show, status: :created
+        post = get_resource
+        respond_with get_resource, status: 200
       else
         render json: get_resource.errors, status: :unprocessable_entity
       end
@@ -28,7 +29,8 @@ module Api
     # GET /api/{plural_resource_name}
     def index
       plural_resource_name = "@#{resource_name.pluralize}"
-      resources = resource_class.where(query_params).page(page_params[:page]).per(page_params[:page_size])
+      order = {"created_at" => :desc}
+      resources = resource_class.where(query_params).order(order).page(page_params[:page]).per(page_params[:page_size])
 
       instance_variable_set(plural_resource_name, resources)
       logger.debug("rsc name => " + plural_resource_name)

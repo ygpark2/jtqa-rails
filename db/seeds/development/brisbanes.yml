@@ -6,10 +6,10 @@ records:
     name:            "author"
     email:           "writer@author.com"
     phone:           "04-3829-3424"
-    title:           "Staging yaml title"
-    content:         "Staging yaml content"
-    views:           10
-    total_comments:  20
+    title:           "Brisbane Post title 1"
+    content:         "Brisbane Post content 1"
+    views:           11
+    total_comments:  21
     tag_list:        "first, 123, home, happy"
   - sprig_id: 2
     category:        "default"
@@ -17,10 +17,10 @@ records:
     name:            "author"
     email:           "writer@author.com"
     phone:           "04-3829-3424"
-    title:           "Staging yaml title"
-    content:         "Staging yaml content"
-    views:           10
-    total_comments:  20
+    title:           "Brisbane Post title 2"
+    content:         "Brisbane Post content 2"
+    views:           12
+    total_comments:  22
     tag_list:        "second, 123, home, happy"
   - sprig_id: 3
     category:        "default"
@@ -28,10 +28,10 @@ records:
     name:            "author"
     email:           "writer@author.com"
     phone:           "04-3829-3424"
-    title:           "Staging yaml title"
-    content:         "Staging yaml content"
-    views:           10
-    total_comments:  20
+    title:           "Brisbane Post title 3"
+    content:         "Brisbane Post content 3"
+    views:           13
+    total_comments:  23
     tag_list:        "third, 123, cool, tag"
   - sprig_id: 4
     category:        "test"
@@ -39,10 +39,10 @@ records:
     name:            "author"
     email:           "writer@author.com"
     phone:           "04-3829-3424"
-    title:           "Staging yaml title"
-    content:         "Staging yaml content"
-    views:           10
-    total_comments:  20
+    title:           "Brisbane Post title 4"
+    content:         "Brisbane Post content 4"
+    views:           14
+    total_comments:  24
     tag_list:        "forth, 4, nappy, home, happy"
   - sprig_id: 5
     category:        "test"
@@ -50,8 +50,8 @@ records:
     name:            "author"
     email:           "writer@author.com"
     phone:           "04-3829-3424"
-    title:           "Staging yaml title"
-    content:         "Staging yaml content"
-    views:           10
-    total_comments:  20
+    title:           "Brisbane Post title 5"
+    content:         "Brisbane Post content 5"
+    views:           15
+    total_comments:  25
     tag_list:        "fifth, 5, merong, ain, home, happy"
