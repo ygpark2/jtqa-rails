@@ -5,7 +5,7 @@ module Api
       private
 
       def brisbane_params
-        params.require(:brisbane).permit(:category, :name, :title, :email, :contact, :content)
+        params.require(:brisbane).permit(:category, :name, :title, :email, :contact, :tag_list, :content)
       end
 
       def query_params
