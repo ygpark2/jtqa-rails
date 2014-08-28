@@ -7,7 +7,12 @@ json.brisbanes @brisbanes do |post|
   json.views               post.views
   json.email               post.email
   json.phone               post.phone
-  json.tags                post.tags
+  json.tags                post.tags do |tag|
+    json.id  tag.id
+    json.name tag.name
+    json.taggins_count tag.taggings_count
+    json.posts [ post.id ]
+  end
   json.content             post.content
   json.total_comments      post.total_comments
   json.created_at          post.created_at
