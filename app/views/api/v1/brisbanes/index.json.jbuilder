@@ -8,10 +8,16 @@ json.brisbanes @brisbanes do |post|
   json.email               post.email
   json.phone               post.phone
   json.tags                post.tags do |tag|
-    json.id  tag.id
-    json.name tag.name
-    json.taggins_count tag.taggings_count
-    json.posts [ post.id ]
+    json.id             tag.id
+    json.name           tag.name
+    json.taggings_count tag.taggings_count
+    json.posts          [ post.id ]
+  end
+  json.comments            post.comments do |comment|
+    json.id        comment.id
+    json.title     comment.title
+    json.comment   comment.comment
+    json.post      post.id
   end
   json.content             post.content
   json.total_comments      post.total_comments
