@@ -25,3 +25,7 @@ json.brisbanes @brisbanes do |post|
   json.updated_at          post.updated_at
 
 end
+
+json.set! :meta do
+  json.set! :total_pages, @brisbanes.total_pages
+end

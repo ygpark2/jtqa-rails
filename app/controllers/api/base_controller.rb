@@ -29,7 +29,7 @@ module Api
     def index
       plural_resource_name = "@#{resource_name.pluralize}"
       order = {"created_at" => :desc}
-      resources = resource_class.where(query_params).order(order).page(page_params[:page]).per(page_params[:page_size])
+      resources = resource_class.where(query_params).order(order).page(page_params[:page]).per(page_params[:pageSize])
 
       instance_variable_set(plural_resource_name, resources)
       logger.debug("rsc name => " + plural_resource_name)
@@ -70,7 +70,7 @@ module Api
     # Returns the allowed parameters for pagination
     # @return [Hash]
     def page_params
-      params.permit(:page, :page_size)
+      params.permit(:page, :pageSize)
     end
 
     # The resource class based on the controller
