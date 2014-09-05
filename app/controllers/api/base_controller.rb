@@ -45,7 +45,7 @@ module Api
     # PATCH/PUT /api/{plural_resource_name}/1
     def update
       if get_resource.update(resource_params)
-        render json: {resource_name => get_resource}, status: :updated
+        respond_with resource_name => get_resource, status: 200
       else
         render json: get_resource.errors, status: :unprocessable_entity
       end
