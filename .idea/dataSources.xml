@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="Rails jtqa-rails: development" uuid="b5f76cee-fb5d-438d-9546-7f7b161c2ae4">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\ygpark2\git\jtqa-rails\db\development.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails jtqa-rails: test" uuid="ff656125-32da-4307-8ecf-ec96dab24500">

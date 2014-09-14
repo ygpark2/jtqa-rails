@@ -1,6 +1,6 @@
-json.comment @comments do |comment|
+json.comments @comments do |comment|
   json.id    comment.id
   json.title comment.title
+  json.comment comment.comment
 
-  json.post_id  ? comment.post comment.post.id : nil
 end

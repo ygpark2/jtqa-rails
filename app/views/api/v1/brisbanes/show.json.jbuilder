@@ -13,11 +13,8 @@ json.brisbane do
     json.taggings_count tag.taggings_count
     json.posts          [ @brisbane.id ]
   end
-  json.comments            @brisbane.comments do |comment|
-    json.id        comment.id
-    json.title     comment.title
-    json.comment   comment.comment
-    json.post      @brisbane.id
+  json.links do
+    json.comments "/api/v1/brisbanes/#{@brisbane.id}/comments"
   end
   json.content             @brisbane.content
   json.total_comments      @brisbane.total_comments
