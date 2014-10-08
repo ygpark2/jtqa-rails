@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3590f8af-d75c-4ef8-b6d6-7affccfa35ab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/comments_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/comments_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/v1/brisbanes/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/api/v1/brisbanes/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/v1/comments/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/api/v1/comments/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jtqa-rails.iml" afterPath="$PROJECT_DIR$/jtqa-rails.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/api/v1/brisbanes/show.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/api/v1/brisbanes/show.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="3590f8af-d75c-4ef8-b6d6-7affccfa35ab" name="Default" comment="" />
     <ignored path="jtqa-rails.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />

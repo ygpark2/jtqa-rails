@@ -15,9 +15,10 @@ json.brisbanes @brisbanes do |post|
   end
   json.comments            post.comments do |comment|
     json.id        comment.id
+    json.post_id   post.id
+    json.post_type      "brisbane"
     json.title     comment.title
     json.comment   comment.comment
-    json.post      post.id
   end
   json.content             post.content
   json.total_comments      post.total_comments
