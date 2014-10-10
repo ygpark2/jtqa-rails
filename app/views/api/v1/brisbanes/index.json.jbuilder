@@ -7,18 +7,22 @@ json.brisbanes @brisbanes do |post|
   json.views               post.views
   json.email               post.email
   json.phone               post.phone
-  json.tags               post.tags do |tag|
-    json.id             tag.id
-    json.name           tag.name
-    json.taggings_count tag.taggings_count
-    json.posts          [ post.id ]
+  json.tags                post.tags do |tag|
+    json.id                  tag.id
+    json.name                tag.name
+    json.taggings_count      tag.taggings_count
+    json.posts               do
+       json.array! do
+         json.post_id post.id
+          json.post_type "brisbane"
+        end
+    end
   end
   json.comments            post.comments do |comment|
-    json.id        comment.id
-    json.post_id   post.id
-    json.post_type      "brisbane"
-    json.title     comment.title
-    json.comment   comment.comment
+    json.id                  comment.id
+    json.brisbane            post.id
+    json.title               comment.title
+    json.comment             comment.comment
   end
   json.content             post.content
   json.total_comments      post.total_comments
