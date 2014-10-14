@@ -11,11 +11,8 @@ json.brisbanes @brisbanes do |post|
     json.id                  tag.id
     json.name                tag.name
     json.taggings_count      tag.taggings_count
-    json.posts               do
-       json.array! do
-         json.post_id post.id
-          json.post_type "brisbane"
-        end
+    json.posts    post.find_related_tags  do |ptag|
+      json.brisbane ptag.id
     end
   end
   json.comments            post.comments do |comment|
