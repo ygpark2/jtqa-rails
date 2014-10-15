@@ -11,7 +11,9 @@ json.brisbane do
     json.id             tag.id
     json.name           tag.name
     json.taggings_count tag.taggings_count
-    json.posts          [ @brisbane.id ]
+    json.posts               do
+      json.array! [{:id => @brisbane.id, :type => "brisbane"}]
+    end
   end
   json.comments            @brisbane.comments do |comment|
     json.id        comment.id
