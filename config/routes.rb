@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'sessions' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   namespace :api do
     namespace :v1 do
+      resources :csrf, :defaults => {:format => "json"}, only: [:index]
       resources :participants
       resources :brisbanes, :sydneys, :melbournes, :defaults => {:format => "json"} do
       end
