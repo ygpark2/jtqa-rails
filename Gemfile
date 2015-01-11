@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
+gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -24,8 +24,19 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'rolify'
-gem 'devise'
-gem 'activeadmin', github: 'gregbell/active_admin'
+# gem 'devise'
+gem 'omniauth'
+gem 'devise_token_auth', '0.1.31.beta9'
+
+# omniauth providers
+gem 'omniauth-github',        :git => 'git://github.com/intridea/omniauth-github.git'
+gem 'omniauth-facebook',      :git => 'git://github.com/mkdynamic/omniauth-facebook.git'
+gem 'omniauth-google-oauth2', :git => 'git://github.com/zquestz/omniauth-google-oauth2.git'
+
+gem 'inherited_resources', github: 'josevalim/inherited_resources', branch: 'rails-4-2'
+gem 'activeadmin', github: 'activeadmin'
+# gem 'inherited_resources', github: 'josevalim/inherited_resources', branch: 'rails-4-2'
+
 gem 'rack-cors', :require => 'rack/cors'
 
 gem 'acts_as_votable', '~> 0.10.0'

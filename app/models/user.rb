@@ -2,9 +2,15 @@ class User < ActiveRecord::Base
   rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  # devise :database_authenticatable, :registerable,
+  #        :recoverable, :rememberable, :trackable, :validatable
 
+  devise :database_authenticatable, :recoverable,
+         :trackable, :validatable, :registerable,
+         :omniauthable
+
+  include DeviseTokenAuth::Concerns::User
+=begin
   before_save :ensure_authentication_token
 
   def ensure_authentication_token
@@ -21,5 +27,6 @@ class User < ActiveRecord::Base
       break token unless User.where(authentication_token: token).first
     end
   end
+=end
 
 end

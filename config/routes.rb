@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  devise_for :users, :path => 'api/v1/users', controllers: { sessions: 'api/v1/user/sessions', registrations: 'api/v1/user/registrations' }
+  # devise_for :users, :path => 'api/v1/users', controllers: { sessions: 'api/v1/user/sessions', registrations: 'api/v1/user/registrations' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  mount_devise_token_auth_for 'User', at: '/api/v1/auth', skip: [:omniauth_callbacks]
 
   namespace :api do
     namespace :v1 do
