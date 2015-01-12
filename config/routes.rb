@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   mount_devise_token_auth_for 'User', at: '/api/v1/auth', skip: [:omniauth_callbacks]
+  # , controllers: {
+  #   sessions:  'overrides/sessions'
+  # }
 
   namespace :api do
     namespace :v1 do

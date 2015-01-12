@@ -1,6 +1,12 @@
 
 records:
   - sprig_id:   1
+    provider:               "email"
+    uid:                    "<%= sprig_record(User, 1) %>"
+    name:                   "this is name"
+    nickname:               "nick name"
+    image:                  "this is image"
+    tokens:                 {abcd@test1.com: {token: "2wfefw323fw3sdfwwieofwj2389f2", "expiry": "2016-10-11"}}
     email:                  "abcd@test1.com"
     password:               "password1234"
     reset_password_token:   "reset_pass_token1"
@@ -11,13 +17,16 @@ records:
     last_sign_in_at:        "<%= 10.second.ago %>"
     current_sign_in_ip:     "192.168.0.1"
     last_sign_in_ip:        "192.168.0.10"
-    first_name:             "Lawson"
-    last_name:              "Kurtz"
-    contact_number:         "0413-843-182"
     roles:
       - "<%= sprig_record(Role, 1) %>"
       - "<%= sprig_record(Role, 2) %>"
   - sprig_id:   2
+    provider:               "email"
+    uid:                    "<%= sprig_record(User, 2) %>"
+    name:                   "this is name"
+    nickname:               "nick name"
+    image:                  "this is image"
+    tokens:                 {abcd@test2.com: {token: "23sdfwwieofwj2389f2", "expiry": "2017-10-14"}}
     email:                  "abcd@test2.com"
     password:               "password1234"
     reset_password_token:   "reset_pass_token2"
@@ -28,13 +37,16 @@ records:
     last_sign_in_at:        "<%= 10.second.ago %>"
     current_sign_in_ip:     "192.168.0.1"
     last_sign_in_ip:        "192.168.0.10"
-    first_name:             "Lawson"
-    last_name:              "Kurtz"
-    contact_number:         "0413-843-182"
     roles:
       - "<%= sprig_record(Role, 1) %>"
       - "<%= sprig_record(Role, 3) %>"
   - sprig_id:   3
+    provider:               "provider_name"
+    uid:                    "<%= sprig_record(User, 3) %>"
+    name:                   "this is name"
+    nickname:               "nick name"
+    image:                  "this is image"
+    tokens:                 {abcd@test3.com: {token: "wieofwj2389f2", "expiry": "2016-10-11"}}
     email:                  "abcd@test3.com"
     password:               "password1234"
     reset_password_token:   "reset_pass_token3"
@@ -45,8 +57,5 @@ records:
     last_sign_in_at:        "<%= 10.second.ago %>"
     current_sign_in_ip:     "192.168.0.1"
     last_sign_in_ip:        "192.168.0.10"
-    first_name:             "Lawson"
-    last_name:              "Kurtz"
-    contact_number:         "0413-843-182"
     roles:
       - "<%= sprig_record(Role, 1) %>"
