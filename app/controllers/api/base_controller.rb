@@ -40,14 +40,16 @@ module Api
     # GET /api/{plural_resource_name}/1
     def show
       rsc = get_resource
-      logger.debug(rsc.inspect)
-      logger.debug("rsc view count => #{rsc[:views]}")
-      if rsc.update({:views => rsc[:views] + 1})
-        logger.debug("views updated!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1")
-        respond_with resource_name => rsc, status: 200
+      if rsc.has_attribute? "views"
+        if rsc.update({:views => rsc[:views] + 1})
+          respond_with resource_name => rsc, status: 200
+        else
+          render json: rsc.errors, status: :unprocessable_entity
+        end
       else
-        render json: rsc.errors, status: :unprocessable_entity
+        respond_with resource_name => rsc, status: 200
       end
+
     end
 
     # PATCH/PUT /api/{plural_resource_name}/1
