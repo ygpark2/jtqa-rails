@@ -1,4 +1,5 @@
 json.brisbane do
+  json.array! do
   json.id                  @brisbane.id
   json.category            @brisbane.category
   json.user_id             @brisbane.user_id
@@ -15,6 +16,7 @@ json.brisbane do
       json.array! [{:id => @brisbane.id, :type => "brisbane"}]
     end
   end
+  json.abc                 "-------------klsdfkjlsdflksdf--------------"
   json.links do
     json.comments "/api/v1/brisbanes/#{@brisbane.id}/comments"
   end
@@ -22,5 +24,5 @@ json.brisbane do
   json.total_comments      @brisbane.total_comments
   json.created_at          @brisbane.created_at
   json.updated_at          @brisbane.updated_at
-
+  end
 end

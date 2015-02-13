@@ -13,7 +13,8 @@ module Api
       set_resource(resource_class.new(resource_params))
 
       if get_resource.save
-        render json: {resource_name => get_resource}, status: :created
+        # respond_with resource_name => get_resource, status: :created
+        render json: {resource_name.pluralize => [get_resource.as_json]}, status: :created
       else
         render json: get_resource.errors, status: :unprocessable_entity
       end
