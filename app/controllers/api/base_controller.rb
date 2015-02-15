@@ -14,7 +14,7 @@ module Api
 
       if get_resource.save
         # respond_with resource_name => get_resource, status: :created
-        render json: {resource_name.pluralize => [get_resource.as_json]}, status: :created
+        render json: {resource_name => get_resource}, status: :created
       else
         render json: get_resource.errors, status: :unprocessable_entity
       end
