@@ -4,9 +4,11 @@ module Api
 
       # POST /api/{plural_resource_name}/{plural_resource_name_id}/comments
       def create
-        rsc_key_nm = params.keys.find_all{|e| e.end_with?("_id")}.first
-        post_nm = rsc_key_nm.split("_").first
-        post = post_nm.classify.constantize.find params[rsc_key_nm]
+        del_key_str = "Post"
+        # rsc_key_nm = params.keys.find_all{|e| e.end_with?(del_key_str)}.first
+        rsc_key_nm = params[:comment][:type]
+        post_nm = rsc_key_nm.chomp! del_key_str
+        post = post_nm.classify.constantize.find params[:comment][:post]
         logger.debug(post)
         logger.debug("---------------------------------")
         logger.debug(params.values)
@@ -23,7 +25,7 @@ module Api
           logger.debug("++++++++++++++++++++++++++")
           logger.debug(post.comments.inspect)
           logger.debug("++++++++++++++++++++++++++")
-          # render json: {post_nm => post}, status: :created
+          render json: {post_nm => post}, status: :created
         else
           # render json: get_resource.errors, status: :unprocessable_entity
         end
