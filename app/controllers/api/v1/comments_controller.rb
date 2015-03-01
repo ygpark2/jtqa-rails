@@ -5,27 +5,15 @@ module Api
       # POST /api/{plural_resource_name}/{plural_resource_name_id}/comments
       def create
         del_key_str = "Post"
-        # rsc_key_nm = params.keys.find_all{|e| e.end_with?(del_key_str)}.first
         rsc_key_nm = params[:comment][:type]
-        post_nm = rsc_key_nm.chomp! del_key_str
-        post = post_nm.classify.constantize.find params[:comment][:post]
-        logger.debug(post)
-        logger.debug("---------------------------------")
-        logger.debug(params.values)
-        logger.debug(params.keys.find_all{|e| e.end_with?("_id")})
-        logger.debug(resource_class)
-        logger.debug(resource_name)
-        logger.debug("---------------------------------")
+        @resource_name = rsc_key_nm.chomp! del_key_str
+        obj = resource_class.find params[:comment][:id]
         # set_resource(resource_class.new(resource_params))
 
-        comment = post.comments.create
-        comment.title = params[:title]
-        comment.comment = params[:comment]
-        if post.save
-          logger.debug("++++++++++++++++++++++++++")
-          logger.debug(post.comments.inspect)
-          logger.debug("++++++++++++++++++++++++++")
-          render json: {post_nm => post}, status: :created
+        comment = obj.comments.create(title: params[:comment][:title], comment: params[:comment][:comment])
+        obj.total_comments = obj.total_comments + 1 # increase comment count
+        if obj.save
+          render json: {@resource_name => obj}, status: :created
         else
           # render json: get_resource.errors, status: :unprocessable_entity
         end
@@ -33,18 +21,9 @@ module Api
 
       # GET /api/{plural_resource_name}/{plural_resource_name_id}/comments
       def index
-        rsc_key_nm = params.keys.find_all{|e| e.end_with?("_id")}.first
-        post_nm = rsc_key_nm.split("_").first
-        post = post_nm.classify.constantize.find params[rsc_key_nm]
-        comments = post.comments.to_a
-
-        logger.debug "brisbanes => #{post.inspect}"
-        logger.debug "brisbanes name => #{post_nm}"
-        logger.debug "brisbanes comments => #{post.comments.inspect}"
-        logger.debug "resource_name => #{resource_name.pluralize}"
-        logger.debug "comments => #{comments.inspect}"
-
-        render json: {resource_name.pluralize => post.comments}, status: 200
+        @resource_name = params[:klass].singularize
+        obj = resource_class.find params[:id]
+        render json: {self.controller_name.pluralize => obj.comments}, status: 200
         # respond_with resource_name.pluralize => comments
       end
 

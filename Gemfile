@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
+gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -33,7 +33,7 @@ gem 'omniauth-github',        :git => 'git://github.com/intridea/omniauth-github
 gem 'omniauth-facebook',      :git => 'git://github.com/mkdynamic/omniauth-facebook.git'
 gem 'omniauth-google-oauth2', :git => 'git://github.com/zquestz/omniauth-google-oauth2.git'
 
-gem 'inherited_resources', github: 'josevalim/inherited_resources', branch: 'rails-4-2'
+gem 'inherited_resources'
 gem 'activeadmin', github: 'activeadmin'
 # gem 'inherited_resources', github: 'josevalim/inherited_resources', branch: 'rails-4-2'
 

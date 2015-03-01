@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/activeadmin/activeadmin.git
-  revision: 7aef260921d418d904d2dba9b1a97eed893e9019
+  revision: ed1fbca8c64af827616c58f274d7be256ca513b6
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0, >= 1.0.2)
@@ -8,7 +8,7 @@ GIT
       coffee-rails
       formtastic (~> 3.1)
       formtastic_i18n
-      inherited_resources (~> 1.4, != 1.5.0)
+      inherited_resources (~> 1.6)
       jquery-rails
       jquery-ui-rails (~> 5.0)
       kaminari (~> 0.15)
@@ -18,33 +18,22 @@ GIT
 
 GIT
   remote: git://github.com/intridea/omniauth-github.git
-  revision: 21fa5e1a7295a11eae42846690b1eee88e57c23a
+  revision: e0304e73d3efc5e269b024556145339b8a4551b3
   specs:
     omniauth-github (1.1.2)
       omniauth (~> 1.0)
-      omniauth-oauth2 (~> 1.1)
-
-GIT
-  remote: git://github.com/josevalim/inherited_resources.git
-  revision: ff1c991307ff78cce98882b6986aeabbbcfd70c4
-  branch: rails-4-2
-  specs:
-    inherited_resources (1.5.1)
-      actionpack (>= 3.2, < 5)
-      has_scope (~> 0.6.0.rc)
-      railties (>= 3.2, < 5)
-      responders
+      omniauth-oauth2 (>= 1.1.1, < 2.0)
 
 GIT
   remote: git://github.com/mkdynamic/omniauth-facebook.git
-  revision: 9f729037e5c27d102462ebbb205b5da17f9aaf86
+  revision: c870494ef55a4deef17f5c77bb02cc2241953adb
   specs:
     omniauth-facebook (2.0.0)
       omniauth-oauth2 (~> 1.2)
 
 GIT
   remote: git://github.com/zquestz/omniauth-google-oauth2.git
-  revision: 74d9e4fa4ec369bbb088628b1f400e54d3094fd9
+  revision: 6e90c8bb998e576f32731ce94792621f0e14ce6c
   specs:
     omniauth-google-oauth2 (0.2.6)
       omniauth (>= 1.1.1)
@@ -88,16 +77,16 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    acts-as-taggable-on (3.4.3)
+    acts-as-taggable-on (3.4.4)
       activerecord (>= 3.2, < 5)
     acts_as_commentable (4.0.2)
     acts_as_votable (0.10.0)
-    arbre (1.0.2)
+    arbre (1.0.3)
       activesupport (>= 3.0.0)
     arel (6.0.0)
-    bcrypt (3.1.9)
-    bcrypt (3.1.9-x64-mingw32)
-    bourbon (3.2.3)
+    bcrypt (3.1.10)
+    bcrypt (3.1.10-x64-mingw32)
+    bourbon (3.2.4)
       sass (~> 3.2)
       thor
     builder (3.2.2)
@@ -107,7 +96,7 @@ GEM
     coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.8.0)
+    coffee-script-source (1.9.1)
     devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -119,21 +108,26 @@ GEM
       devise (~> 3.3)
       rails (~> 4.2)
     erubis (2.7.0)
-    execjs (2.2.2)
+    execjs (2.3.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     formtastic (3.1.3)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.1.1)
-    globalid (0.3.0)
+    globalid (0.3.3)
       activesupport (>= 4.1.0)
-    has_scope (0.6.0.rc)
+    has_scope (0.6.0)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
-    hashie (3.3.2)
+    hashie (3.4.0)
     hike (1.2.3)
     i18n (0.7.0)
-    jbuilder (2.2.6)
+    inherited_resources (1.6.0)
+      actionpack (>= 3.2, < 5)
+      has_scope (~> 0.6.0.rc)
+      railties (>= 3.2, < 5)
+      responders
+    jbuilder (2.2.7)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-rails (4.0.3)
@@ -143,10 +137,11 @@ GEM
     jquery-ui-rails (5.0.3)
       railties (>= 3.2.16)
     json (1.8.2)
-    jwt (1.2.0)
-    kaminari (0.16.1)
+    jwt (1.2.1)
+    kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    libv8 (3.16.14.7)
     loofah (2.0.1)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -157,9 +152,9 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    nokogiri (1.6.5)
+    nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
-    nokogiri (1.6.5-x64-mingw32)
+    nokogiri (1.6.6.2-x64-mingw32)
       mini_portile (~> 0.6.0)
     oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
@@ -207,7 +202,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
-    ransack (1.5.1)
+    ransack (1.6.3)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       activesupport (>= 3.0)
@@ -215,9 +210,10 @@ GEM
       polyamorous (~> 1.1)
     rdoc (4.2.0)
       json (~> 1.4)
-    responders (2.0.2)
-      railties (>= 4.2.0.alpha, < 5)
-    rolify (3.5.1)
+    ref (1.0.5)
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
+    rolify (4.0.0)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -228,18 +224,21 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     sprig (0.1.6)
-    spring (1.2.0)
+    spring (1.3.2)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.2.2)
+    sprockets-rails (2.2.4)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
     sqlite3 (1.3.10)
     sqlite3 (1.3.10-x64-mingw32)
+    therubyracer (0.12.1)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -247,7 +246,7 @@ GEM
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2014.10)
+    tzinfo-data (1.2015.1)
       tzinfo (>= 1.0.0)
     uglifier (2.7.0)
       execjs (>= 0.3.0)
@@ -266,7 +265,7 @@ DEPENDENCIES
   acts_as_votable (~> 0.10.0)
   coffee-rails (~> 4.0.0)
   devise_token_auth (= 0.1.31.beta9)
-  inherited_resources!
+  inherited_resources
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
@@ -282,6 +281,7 @@ DEPENDENCIES
   sprig (~> 0.1)
   spring
   sqlite3
+  therubyracer
   turbolinks
   tzinfo-data
   uglifier (>= 1.3.0)

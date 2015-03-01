@@ -14,8 +14,9 @@ Rails.application.routes.draw do
       resources :csrf, :defaults => {:format => "json"}, only: [:index]
       resources :participants
       resources :brisbanes, :sydneys, :melbournes, :defaults => {:format => "json"} do
+
       end
-      resources :comments, :defaults => {:format => "json"} # , only: [:create, :destroy, :edit, :update]
+      resources :comments, :path => ':klass/:id/comments', :defaults => {:format => "json"} , only: [:index, :create]
     end
   end
 
