@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
          :omniauthable
 
   include DeviseTokenAuth::Concerns::User
+
 =begin
   before_save :ensure_authentication_token
 

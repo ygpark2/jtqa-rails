@@ -15,6 +15,9 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit({ roles: [] }, :name, :nickname, :email, :password, :password_confirmation) }
   end
 
+  private
+
+
 =begin
   before_filter :authenticate_user_from_token!
 

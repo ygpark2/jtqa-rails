@@ -18,6 +18,7 @@ module Overrides
       end
     end
 
+=begin
     def validate_token
       # @user will have been set by set_user_by_token concern
       if @user
@@ -31,5 +32,7 @@ module Overrides
         }, status: 401
       end
     end
+=end
+
   end
 end

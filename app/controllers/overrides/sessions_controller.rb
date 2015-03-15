@@ -34,7 +34,7 @@ module Overrides
         logger.debug @resource.tokens.inspect
         logger.debug "----------------------------------------------------------"
         render json: {
-	  id: @resource.id,
+	        id: @resource.id,
           token: @resource.tokens[@client_id][:token],
           email: @resource.email
           # data: @resource.as_json(except: [

@@ -5,16 +5,17 @@ module Api
 
     before_action :set_resource, only: [:destroy, :show, :update]
     # skip_before_filter  :verify_authenticity_token
+    before_action :authenticate_user!, only: [:create]
 
     respond_to :json
 
     # POST /api/{plural_resource_name}
     def create
-      set_resource(resource_class.new(resource_params))
+      set_resource(get_resource_class.new(get_resource_params))
 
       if get_resource.save
         # respond_with resource_name => get_resource, status: :created
-        render json: {resource_name => get_resource}, status: :created
+        render json: {get_resource_name => get_resource}, status: :created
       else
         render json: get_resource.errors, status: :unprocessable_entity
       end
@@ -28,9 +29,9 @@ module Api
 
     # GET /api/{plural_resource_name}
     def index
-      plural_resource_name = "@#{resource_name.pluralize}"
+      plural_resource_name = "@#{get_resource_name.pluralize}"
       order = {"created_at" => :desc}
-      resources = resource_class.where(query_params).order(order).page(page_params[:page]).per(page_params[:per_page])
+      resources = get_resource_class.where(query_params).order(order).page(page_params[:page]).per(page_params[:per_page])
 
       instance_variable_set(plural_resource_name, resources)
       logger.debug("rsc name => " + plural_resource_name)
@@ -43,20 +44,20 @@ module Api
       rsc = get_resource
       if rsc.has_attribute? "views"
         if rsc.update({:views => rsc[:views] + 1})
-          respond_with resource_name => rsc, status: 200
+          respond_with get_resource_name => rsc, status: 200
         else
           render json: rsc.errors, status: :unprocessable_entity
         end
       else
-        respond_with resource_name => rsc, status: 200
+        respond_with get_resource_name => rsc, status: 200
       end
 
     end
 
     # PATCH/PUT /api/{plural_resource_name}/1
     def update
-      if get_resource.update(resource_params)
-        respond_with resource_name => get_resource, status: 200
+      if get_resource.update(get_resource_params)
+        respond_with get_resource_name => get_resource, status: 200
       else
         render json: get_resource.errors, status: :unprocessable_entity
       end
@@ -67,7 +68,7 @@ module Api
     # Returns the resource from the created instance variable
     # @return [Object]
     def get_resource
-      instance_variable_get("@#{resource_name}")
+      instance_variable_get("@#{get_resource_name}")
     end
 
     # Returns the allowed parameters for searching
@@ -86,13 +87,13 @@ module Api
 
     # The resource class based on the controller
     # @return [Class]
-    def resource_class
+    def get_resource_class
       @resource_class ||= resource_name.classify.constantize
     end
 
     # The singular name for the resource class based on the controller
     # @return [String]
-    def resource_name
+    def get_resource_name
       @resource_name ||= self.controller_name.singularize
     end
 
@@ -101,7 +102,7 @@ module Api
     # then the controller for the resource must implement
     # the method "#{resource_name}_params" to limit permitted
     # parameters for the individual model.
-    def resource_params
+    def get_resource_params
       @resource_params ||= self.send("#{resource_name}_params")
     end
 
